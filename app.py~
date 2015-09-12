@@ -1,0 +1,39 @@
+import sys
+
+sys.dont_write_bytecode = True  # Don't write a .pyc file
+sys.path.append('mods/os_commands')
+
+from mods import osCommands as OSC
+from mods import structureIntegrity as SI
+from mods import nmap
+from mods import createFiles as fact
+
+tmpDir = "tmp"
+tmp_alpha = "tmp/192_168_15/20150610_1833/192.168.15"
+tmp_beta = "tmp/162_37_69/20150610_0844/162.37.69"
+
+
+# Ask user for the segment scan and create a location for results
+# default path  = 'tmp/[year][month][day]_[time]/segment'
+userInput = SI.segmentScript(OSC.mod_datetime, tmpDir)
+
+# Menu provided for nmap scan details
+pathSent = userInput.menu()
+'''
+if userInput.menu()[0] == False:
+    print "Default exit provided"
+
+nmp = nmap.nmapScript(pathSent[0], pathSent[1])
+segment_full_path = nmp.cmd()
+
+sa = fact.createFiles(segment_full_path)
+sa.loadFromFile()
+'''
+'''
+Folder creation is completed, segment scanned and file made.
+Lets pull that file apart now. 
+
+Obj: 
+	Confirm each 4th octave is free from a device
+	save each device in SQLite for easy CVS file convertion later.
+'''

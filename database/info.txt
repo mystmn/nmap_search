@@ -1,0 +1,29 @@
+# See all Columns 
+# sqlite>.schema tablename
+
+# Drop Table
+# sqlite> DROP TABLE fileDatabaseName.tablename;
+
+[Database	= personal]
+[Table		= devices]
+[Columns:
+	[id],
+	[deviceName] = sa04,
+	[ip] = 162036069049,
+	[domain] = co.trinity-health.org,
+	[os] = windows 7
+	[dateScan] = 06202015,
+	[timeScan] = 0928,
+]
+
+Create TABLE main.devices ( 
+id INTEGER PRIMARY KEY AUTOINCREMENT,
+deviceName VARCHAR (30),
+ip VARCHAR (15), 
+domain VARCHAR (30),
+os VARCHAR (75), 
+dateStamp DATE, 
+timeStamp DATETIME
+);
+
+sqlite> SELECT id from test where name="coshws02";

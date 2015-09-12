@@ -1,0 +1,212 @@
+
+###################################### OS Detection ######################################
+sa07@sa07-desktop:~/cross-platform/NetSearch$ sudo nmap -O 162.37.69.69
+
+	Starting Nmap 6.40 ( http://nmap.org ) at 2015-06-10 08:02 EDT
+	Nmap scan report for coshws150274.co.trinity-health.org (162.37.69.69)
+	Host is up (0.0015s latency).
+	Not shown: 989 closed ports
+	PORT      STATE SERVICE
+	135/tcp   open  msrpc
+	139/tcp   open  netbios-ssn
+	445/tcp   open  microsoft-ds
+	3389/tcp  open  ms-wbt-server
+	4446/tcp  open  n1-fwp
+	5950/tcp  open  unknown
+	8081/tcp  open  blackice-icecap
+	49152/tcp open  unknown
+	49153/tcp open  unknown
+	49154/tcp open  unknown
+	49155/tcp open  unknown
+	Device type: general purpose
+	Running: Microsoft Windows 2008|7
+	OS CPE: cpe:/o:microsoft:windows_server_2008::sp2 cpe:/o:microsoft:windows_7::- cpe:/o:microsoft:windows_7::sp1 cpe:/o:microsoft:windows_8
+	OS details: Microsoft Windows Server 2008 SP2, Microsoft Windows 7 SP0 - SP1, Windows Server 2008 SP1, or Windows 8
+	Network Distance: 2 hops
+
+	OS detection performed. Please report any incorrect results at http://nmap.org/submit/ .
+	Nmap done: 1 IP address (1 host up) scanned in 69.14 seconds
+
+###################################### Service Version Detection ######################################
+sa07@sa07-desktop:~/cross-platform/NetSearch$ sudo nmap -sV 162.37.69.49
+
+	Starting Nmap 6.40 ( http://nmap.org ) at 2015-06-10 08:05 EDT
+	Nmap scan report for coshws142000.co.trinity-health.org (162.37.69.49)
+	Host is up (0.0016s latency).
+	Not shown: 989 closed ports
+	PORT      STATE SERVICE       VERSION
+	80/tcp    open  http          Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+	135/tcp   open  msrpc         Microsoft Windows RPC
+	139/tcp   open  netbios-ssn
+	445/tcp   open  netbios-ssn
+	3389/tcp  open  ms-wbt-server Microsoft Terminal Service
+	4446/tcp  open  tcpwrapped
+	5950/tcp  open  vnc           VNC (protocol 3.7)
+	8081/tcp  open  http          McAfee ePolicy Orchestrator Agent 4.6.0.2292 (ePOServerName: COCBAPTMAAA1;NODCAPTSV405, AgentGuid: {62BC0520-5D72-455C-8933-5EA3F5C177AE})
+	49152/tcp open  msrpc         Microsoft Windows RPC
+	49153/tcp open  msrpc         Microsoft Windows RPC
+	49154/tcp open  msrpc         Microsoft Windows RPC
+	Service Info: Host: COSHWS142000; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+	Service detection performed. Please report any incorrect results at http://nmap.org/submit/ .
+	Nmap done: 1 IP address (1 host up) scanned in 87.35 seconds
+
+###################################### Fast Scan ######################################
+sa07@sa07-desktop:~/cross-platform/NetSearch$ sudo nmap -F 162.37.69.49
+
+	Starting Nmap 6.40 ( http://nmap.org ) at 2015-06-10 08:08 EDT
+	Nmap scan report for coshws142000.co.trinity-health.org (162.37.69.49)
+	Host is up (0.034s latency).
+	Not shown: 91 closed ports
+	PORT      STATE SERVICE
+	80/tcp    open  http
+	135/tcp   open  msrpc
+	139/tcp   open  netbios-ssn
+	445/tcp   open  microsoft-ds
+	3389/tcp  open  ms-wbt-server
+	8081/tcp  open  blackice-icecap
+	49152/tcp open  unknown
+	49153/tcp open  unknown
+	49154/tcp open  unknown
+
+	Nmap done: 1 IP address (1 host up) scanned in 2.61 seconds
+
+###################################### -v -A -T4 ######################################
+sa07@sa07-desktop:~/cross-platform/NetSearch$ sudo nmap -v -A -T4 162.37.69.49
+
+	Starting Nmap 6.40 ( http://nmap.org ) at 2015-06-10 08:34 EDT
+	NSE: Loaded 110 scripts for scanning.
+	NSE: Script Pre-scanning.
+	Initiating Ping Scan at 08:34
+	Scanning 162.37.69.49 [4 ports]
+	Completed Ping Scan at 08:34, 0.55s elapsed (1 total hosts)
+	Initiating Parallel DNS resolution of 1 host. at 08:34
+	Completed Parallel DNS resolution of 1 host. at 08:34, 0.00s elapsed
+	Initiating SYN Stealth Scan at 08:34
+	Scanning coshws142000.co.trinity-health.org (162.37.69.49) [1000 ports]
+	Discovered open port 3389/tcp on 162.37.69.49
+	Discovered open port 445/tcp on 162.37.69.49
+	Discovered open port 135/tcp on 162.37.69.49
+	Discovered open port 80/tcp on 162.37.69.49
+	Discovered open port 139/tcp on 162.37.69.49
+	Discovered open port 49154/tcp on 162.37.69.49
+	Discovered open port 49153/tcp on 162.37.69.49
+	Discovered open port 4446/tcp on 162.37.69.49
+	Discovered open port 8081/tcp on 162.37.69.49
+	Discovered open port 5950/tcp on 162.37.69.49
+	Discovered open port 49152/tcp on 162.37.69.49
+	Completed SYN Stealth Scan at 08:34, 5.88s elapsed (1000 total ports)
+	Initiating Service scan at 08:34
+	Scanning 11 services on coshws142000.co.trinity-health.org (162.37.69.49)
+	Completed Service scan at 08:35, 53.60s elapsed (11 services on 1 host)
+	Initiating OS detection (try #1) against coshws142000.co.trinity-health.org (162.37.69.49)
+	Initiating Traceroute at 08:35
+	Completed Traceroute at 08:35, 0.01s elapsed
+	Initiating Parallel DNS resolution of 2 hosts. at 08:35
+	Completed Parallel DNS resolution of 2 hosts. at 08:35, 0.00s elapsed
+	NSE: Script scanning 162.37.69.49.
+	Initiating NSE at 08:35
+	Completed NSE at 08:35, 15.17s elapsed
+	Nmap scan report for coshws142000.co.trinity-health.org (162.37.69.49)
+	Host is up (0.0085s latency).
+	Not shown: 989 closed ports
+	PORT      STATE SERVICE       VERSION
+	80/tcp    open  http          Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+	|_http-methods: No Allow or Public header in OPTIONS response (status code 404)
+	|_http-title: Not Found
+	135/tcp   open  msrpc         Microsoft Windows RPC
+	139/tcp   open  netbios-ssn
+	445/tcp   open  netbios-ssn
+	3389/tcp  open  ms-wbt-server Microsoft Terminal Service
+	4446/tcp  open  tcpwrapped
+	5950/tcp  open  vnc           VNC (protocol 3.7)
+	| vnc-info: 
+	|   Protocol version: 3.7
+	|   Security types:
+	|     VNC Authentication
+	|     Tight
+	|_    Unknown security type (31)
+	8081/tcp  open  http          NAI EPO Agent framework (Agent ListenServer 1.0)
+	|_http-methods: No Allow or Public header in OPTIONS response (status code 400)
+	|_http-title: Site doesn't have a title (text/html).
+	49152/tcp open  msrpc         Microsoft Windows RPC
+	49153/tcp open  msrpc         Microsoft Windows RPC
+	49154/tcp open  msrpc         Microsoft Windows RPC
+	Device type: general purpose
+	Running: Microsoft Windows 2008|7
+	OS CPE: cpe:/o:microsoft:windows_server_2008::sp2 cpe:/o:microsoft:windows_7::- cpe:/o:microsoft:windows_7::sp1 cpe:/o:microsoft:windows_8
+	OS details: Microsoft Windows Server 2008 SP2, Microsoft Windows 7 SP0 - SP1, Windows Server 2008 SP1, or Windows 8
+	Uptime guess: 0.310 days (since Wed Jun 10 01:09:35 2015)
+	Network Distance: 2 hops
+	TCP Sequence Prediction: Difficulty=260 (Good luck!)
+	IP ID Sequence Generation: Incremental
+	Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+	Host script results:
+	| ms-sql-info: 
+	|   Windows server name: COSHWS142000
+	|   [162.37.69.49\MSSQLSERVER]
+	|     Instance name: MSSQLSERVER
+	|     Version: Microsoft SQL Server 2012 RTM
+	|       Product: Microsoft SQL Server 2012
+	|       Service pack level: RTM
+	|_    Clustered: No
+	| nbstat: 
+	|   NetBIOS name: COSHWS142000, NetBIOS user: <unknown>, NetBIOS MAC: 88:51:fb:7f:98:c0 (Hewlett Packard)
+	|   Names
+	|     COSHWS142000<00>     Flags: <unique><active>
+	|     TRINITY-HEALTH<00>   Flags: <group><active>
+	|     COSHWS142000<20>     Flags: <unique><active>
+	|_    TRINITY-HEALTH<1e>   Flags: <group><active>
+	| smb-os-discovery: 
+	|   OS: Windows 7 Enterprise 7601 Service Pack 1 (Windows 7 Enterprise 6.1)
+	|   OS CPE: cpe:/o:microsoft:windows_7::sp1
+	|   Computer name: COSHWS142000
+	|   NetBIOS computer name: COSHWS142000
+	|   Domain name: trinity-health.org
+	|   Forest name: trinity-health.org
+	|   FQDN: COSHWS142000.co.trinity-health.org
+	|   NetBIOS domain name: TRINITY-HEALTH
+	|_  System time: 2015-06-10T08:35:40-04:00
+	| smb-security-mode: 
+	|   Account that was used for smb scripts: guest
+	|   User-level authentication
+	|   SMB Security: Challenge/response passwords supported
+	|_  Message signing disabled (dangerous, but default)
+	|_smbv2-enabled: Server supports SMBv2 protocol
+
+	TRACEROUTE (using port 1720/tcp)
+	HOP RTT     ADDRESS
+	1   6.75 ms 10.248.168.13
+	2   4.47 ms coshws142000.co.trinity-health.org (162.37.69.49)
+
+	NSE: Script Post-scanning.
+	Read data files from: /usr/bin/../share/nmap
+	OS and Service detection performed. Please report any incorrect results at http://nmap.org/submit/ .
+	Nmap done: 1 IP address (1 host up) scanned in 78.52 seconds
+		   Raw packets sent: 1568 (71.560KB) | Rcvd: 1557 (63.884KB)
+
+
+###################################### smb-os-discovery.nse ######################################
+ispan07@span07:~/Python/NetSearch$ nmap --script smb-os-discovery.nse -p445 162.37.69.49
+
+Starting Nmap 6.47 ( http://nmap.org ) at 2015-06-18 07:38 EDT
+Nmap scan report for coshws142000.co.trinity-health.org (162.37.69.49)
+Host is up (0.0018s latency).
+PORT    STATE SERVICE
+445/tcp open  microsoft-ds
+
+Host script results:
+| smb-os-discovery: 
+|   OS: Windows 7 Enterprise 7601 Service Pack 1 (Windows 7 Enterprise 6.1)
+|   OS CPE: cpe:/o:microsoft:windows_7::sp1
+|   Computer name: COSHWS142000
+|   NetBIOS computer name: COSHWS142000
+|   Domain name: trinity-health.org
+|   Forest name: trinity-health.org
+|   FQDN: COSHWS142000.co.trinity-health.org
+|_  System time: 2015-06-18T07:38:37-04:00
+
+Nmap done: 1 IP address (1 host up) scanned in 5.43 seconds
+
+

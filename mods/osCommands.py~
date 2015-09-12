@@ -1,0 +1,6 @@
+import datetime
+now = datetime.datetime.now()
+
+mod_dt = now.strftime("%Y%m%d_%H%M")  # Set date and time of
+
+

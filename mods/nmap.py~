@@ -1,0 +1,22 @@
+import subprocess
+
+class nmapScript(object):
+	def __init__(self, savePath, segment):
+		self.octavePath = savePath + "/" + segment
+		self.binary = segment + ".0/24"
+
+
+	def cmd(self):
+		try:
+			''' -sl (simple list), -sn (disable port scan), -oN (save file) '''
+			subprocess.call(["sudo", "nmap", "-sL", "-sn", self.binary , "-oN", self.octavePath]) 
+			self.clear()
+			print "Segment %s was successful"% self.binary
+			return self.octavePath		
+		except:
+			self.clear()
+			print  self.octavePath
+			print "An error has occured scanning %s"% self.binary
+			
+	def clear(self):
+		return subprocess.call("clear")

@@ -1,0 +1,77 @@
+#!/usr/bin/env python
+import sys
+
+class dissectFiles(object):
+	def __init__(self, filePath):
+		self.filePath = filePath
+
+	def testA(self, trup):
+		f = open(self.filePath + "_closed", 'w')
+		for line in trup:
+#			print line[0], line[1]		
+			f.writelines(line[0])
+			f.writelines(", ")
+			f.writelines(line[1])
+			f.writelines(", ")
+			f.writelines(line[2])
+			f.writelines(", ")
+			f.writelines(line[3])
+			f.writelines("\r")
+		f.close()
+	
+	def testB(self, trup):
+		f = open(self.filePath + "_open", 'w')
+		for line in trup:		
+			f.writelines(line[0])
+			f.writelines(", ")
+			f.writelines(line[1])
+			f.writelines("\r")
+		f.close()
+
+
+	def loadFromFile(self):
+		setID = 0
+		setArray = []
+		setArrayb = []
+	    	f = open(self.filePath, 'r')
+		
+		#Skip the first and last line
+		openFile = f.readlines()[1:-1]
+
+	    	for line in openFile:
+			setID += 1	
+			go = str(setID)
+
+			if self.ifDigit(line[21]): 
+
+				endSrc = line.rfind(" ") #Goes to the last space between Name.Domain and IP
+				ip = line[endSrc+2:-2] #IP Address
+				device = line.find(".")
+				
+				if device >= endSrc:
+					deviceSet = line.rfind(" ")
+					device = line[21:deviceSet]
+					domain = "none"
+					
+				else:
+					domain = line[device + 1:endSrc]
+					device = line[21:device]				
+
+				print "%s, %s, %s"% (device, ip, domain)
+
+				setArray.append([go, device, ip, domain])
+				self.testA(setArray)
+
+			else:
+				setArrayb.append([go, line[21:-1]])
+				self.testB(setArrayb)
+
+# Is character 17 a number, which says this device isn't a computer but either a
+# free port, printer, or server
+	def ifDigit(self, digit):
+		for letter in digit:
+			if not digit[0].isdigit():
+				return True
+			else:
+				return False
+		

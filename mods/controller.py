@@ -20,6 +20,9 @@ class folderValidation(object):
 
 
 class userInput(object):
+    def __init__(self):
+        self.back_door_segment = False
+
     def menuValidationList(self):
 
         menuList = [
@@ -29,14 +32,16 @@ class userInput(object):
                 "title": "Segment Scan list",
                 "inputQuestion": "What's the segment?",
                 "scanOutput": "segment",
-                "limitation": "default"
+                "limitation": "default",
+                "expected_type": ["yes", "no"]
             },
             {
                 "keycode": 2,
                 "title": "Stealth Segment Scan",
                 "inputQuestion": "What's the stealth single IP?",
                 "scanOutput": "stealth",
-                "limitation": "default"
+                "limitation": "default",
+                "expected_type": 3
             },
             # Automation
             {
@@ -44,7 +49,8 @@ class userInput(object):
                 "title": "File OS Discovery",
                 "inputQuestion": "What's the path?",
                 "scanOutput": "single",
-                "limitation": "automation"
+                "limitation": "automation",
+                "expected_type": "file_path"
             },
             # Optional
             {
@@ -52,14 +58,16 @@ class userInput(object):
                 "title": "OS Discovery Scan",
                 "inputQuestion": "Shall we search the OS Finger print?",
                 "scanOutput": "osDis",
-                "limitation": "optional"
+                "limitation": "optional",
+                "expected_type": ["yes", "no"]
             },
             {
                 "keycode": 2,
                 "title": "Save Scan Results",
                 "inputQuestion": "Continue?",
                 "scanOutput": "saveResults",
-                "limitation": "optional"
+                "limitation": "optional",
+                "expected_type": "file_path"
             }
         ]
         return menuList
@@ -76,24 +84,37 @@ class userInput(object):
 
         return a
 
-    def backDoor(self, admin, list_commands):
+    def back_door(self, list_commands):
 
-        if admin is not False and type(list_commands) is list:
+        if type(list_commands) is list and len(list_commands) == 5 and list_commands[0] is "*":
+            return True
+        else:
+            return False
 
+    def second_pass_menu(self, list_commands):
+
+        if type(list_commands) is list and len(list_commands) == 2 and list_commands[0] is not "*":
+            return True
+        else:
+            return False
 
     def hub(self, set_menu_choice=None):
 
-        if isinstance(set_menu_choice, list):
+        # Needing to set a menu choice
+        if self.second_pass_menu(set_menu_choice):
             x, y = set_menu_choice
             dict_selection = self.displayQuestion(x, y)
+            user_input = raw_input("Answer > ")
 
-        elif self.backDoor():
-            print ''
+        elif self.back_door(set_menu_choice):
+            # set_menu_choice[activate_back_door, menu_key, menu_value, auto_ip_address, over_ride_second_question]
+            dict_selection = self.displayQuestion(set_menu_choice[1], set_menu_choice[2])
+            self.back_door_segment = set_menu_choice[3]
+            user_input = str(set_menu_choice[4])
 
         else:
             dict_selection = self.displayQuestion("limitation", "default")
-
-        user_input = raw_input("Answer > ")
+            user_input = raw_input("Answer > ")
 
         return self.packageReturn(self.join_answer_and_menu_prefix(dict_selection, user_input))
 
@@ -103,20 +124,66 @@ class userInput(object):
 
             if y == str(g['keycode']):
                 n = g
-                n['userInput'] = raw_input("\n" + g['inputQuestion'] + "> ")
+
+                if not self.back_door_segment:
+                    n['userInput'] = raw_input("\n" + g['inputQuestion'] + "> ")
+                else:
+                    n['userInput'] = self.back_door_segment
 
         n['segmentPath'] = folderValidation("tmpTest").convertUserInput(n['userInput'])
 
-        if self.validateAllNumbers(n['scanOutput'], n['userInput'].split('.')):
+        '''
+            Need to add a validation to the type of answer that was given.
+            1) numerical
+            2) yes or no
+            3) file or folder path
+            
+        '''
+        if self.validation(n['expected_type'], n['userInput']):
+            rule.pause("Validation passed")
+            # if self.validateAllNumbers(n['scanOutput'], n['userInput']):
+            #
             # We need to simplify the returned list...not everything is needed
-            filter = ['scanOutput', 'userInput', 'keycode', 'segmentPath']
+            output_filter = ['scanOutput', 'userInput', 'keycode', 'segmentPath']
 
-            return rule.funnel_white_list(filter, self.return_first_key_in_List(n))
+            return rule.funnel_white_list(output_filter, self.return_first_key_in_List(n))
+
         else:
-            return self.hub(["limitation", "default", 1])
+            rule.pause("Validation failed")
+            #            return self.hub(["limitation", "default", 1])
+
+    def validation(self, key, user):
+
+        # Let's filter the ranges if input is numerical or int. This should only look inside IP Addresses
+        if str(key).replace('.', '', 1).isdigit():
+            arry = user.split('.')
+            count_user = len(arry)
+
+            for octave in arry:
+
+                if user[-1] == "." or count_user > key:
+                    print "Too many periods, please remove '%s'. Should look like '%s'" % (user, (".").join(filter(None, arry)))
+                    return False
+                elif int(octave) >= 256:
+                    print type(octave)
+                    print "Highest value allowed is 255, not %s" % octave
+                    return False
+                elif int(octave) < 0:
+                    print "Lowest value allowed is 0, not %s" % octave
+                    return False
+            return True
+
+        ''' Multiple choice '''
+        if isinstance(key, list):
+            for answer in key:
+                print (answer, user)
+                if answer == user.lower():
+                    print "We did it!!"
+                    return True
+            return False
 
     def packageReturn(self, value):
-        print "done...return[controller]"
+        print "controller :: %s" % value
         return value
 
     def return_first_key_in_List(self, container):
@@ -126,18 +193,15 @@ class userInput(object):
         else:
             return container
 
-    def validateAllNumbers(self, code, nmb):
+    def validateAllNumbers(self, code, user_input_answer):
         msg = "...Try again.\n"
 
-        if not nmb[-1].isdigit():
-            print "Last character isn't a number, possibly a period" + msg
-            return False
-        nmb = len(nmb)
+        char_input = len(user_input_answer)
 
         if code == "segment":
-            if nmb == 3:
+            if char_input == 3 and user_input_answer[-1].isdigit():
                 return True
-            elif nmb > 3:
+            elif char_input > 3:
                 print "More than 3 octaves were found in your answer" + msg
                 return False
             else:
@@ -145,19 +209,29 @@ class userInput(object):
                 return False
 
         elif code == "single" or code == "stealth":
-            if nmb == 4:
+
+            if char_input == 4 and user_input_answer[-1].isdigit():
                 return True
-            elif nmb > 4:
+            elif char_input > 4:
                 print "More than 4 octaves were found in your answer" + msg
                 return False
             else:
                 print "Less than 4 octaves were found in your answer" + msg
                 return False
+
+        elif code == "osDis":
+            print "test :: %s " % user_input_answer.lower()
+            if user_input_answer.lower() == "yes":
+                return True
+            else:
+                print "Yes or No, not case sensitive"
+                return False
+
         else:
             return False
 
-        """
-        ###################################################################
-                                    Old Section
-        ###################################################################
-        """
+    """
+    ###################################################################
+                                Old Section
+    ###################################################################
+    """

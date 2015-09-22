@@ -1,7 +1,8 @@
 import subprocess
 from mods import rule
 
-class terminalCentral(object):
+class terminal_central(object):
+    
     def hub(self, splitList):
         closingReports = []
 

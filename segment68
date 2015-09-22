@@ -1,0 +1,370 @@
+# Nmap 6.47 scan initiated Mon Sep 21 11:33:51 2015 as: nmap -sP -oN segment68 162.37.68.1/24
+Nmap scan report for 162.37.68.1
+Host is up (0.0030s latency).
+Nmap scan report for 162.37.68.2
+Host is up (0.0032s latency).
+Nmap scan report for 162.37.68.3
+Host is up (0.0034s latency).
+Nmap scan report for 162.37.68.10
+Host is up (0.0099s latency).
+Nmap scan report for coshws120607new.co.trinity-health.org (162.37.68.11)
+Host is up (0.054s latency).
+Nmap scan report for 162.37.68.12
+Host is up (0.054s latency).
+Nmap scan report for coshws120608.co.trinity-health.org (162.37.68.14)
+Host is up (0.010s latency).
+Nmap scan report for 162.37.68.17
+Host is up (0.0096s latency).
+Nmap scan report for 162.37.68.19
+Host is up (0.069s latency).
+Nmap scan report for 162.37.68.21
+Host is up (0.011s latency).
+Nmap scan report for 162.37.68.22
+Host is up (0.076s latency).
+Nmap scan report for 162.37.68.24
+Host is up (0.089s latency).
+Nmap scan report for 162.37.68.25
+Host is up (0.070s latency).
+Nmap scan report for 162.37.68.26
+Host is up (0.088s latency).
+Nmap scan report for copsws120311.co.trinity-health.org (162.37.68.27)
+Host is up (0.097s latency).
+Nmap scan report for coshws120612.co.trinity-health.org (162.37.68.28)
+Host is up (0.091s latency).
+Nmap scan report for coshws120613.co.trinity-health.org (162.37.68.29)
+Host is up (0.016s latency).
+Nmap scan report for coshws120610.co.trinity-health.org (162.37.68.30)
+Host is up (0.017s latency).
+Nmap scan report for 162.37.68.32
+Host is up (0.052s latency).
+Nmap scan report for 162.37.68.35
+Host is up (0.0054s latency).
+Nmap scan report for copsws120309.co.trinity-health.org (162.37.68.36)
+Host is up (0.056s latency).
+Nmap scan report for 162.37.68.39
+Host is up (0.055s latency).
+Nmap scan report for copsws130373.co.trinity-health.org (162.37.68.40)
+Host is up (0.056s latency).
+Nmap scan report for coshws120693.co.trinity-health.org (162.37.68.41)
+Host is up (0.0023s latency).
+Nmap scan report for 162.37.68.42
+Host is up (0.0033s latency).
+Nmap scan report for coshws120689.co.trinity-health.org (162.37.68.43)
+Host is up (0.061s latency).
+Nmap scan report for oh1mcsa.mchs.com (162.37.68.44)
+Host is up (0.095s latency).
+Nmap scan report for coshws121405.co.trinity-health.org (162.37.68.45)
+Host is up (0.0035s latency).
+Nmap scan report for coshws121404.co.trinity-health.org (162.37.68.47)
+Host is up (0.059s latency).
+Nmap scan report for 162.37.68.48
+Host is up (0.059s latency).
+Nmap scan report for copsws130372.co.trinity-health.org (162.37.68.49)
+Host is up (0.0020s latency).
+Nmap scan report for 162.37.68.50
+Host is up (0.0048s latency).
+Nmap scan report for coshws121477.co.trinity-health.org (162.37.68.51)
+Host is up (0.10s latency).
+Nmap scan report for copsws130374.co.trinity-health.org (162.37.68.52)
+Host is up (0.095s latency).
+Nmap scan report for 162.37.68.53
+Host is up (0.0058s latency).
+Nmap scan report for copsws130195.co.trinity-health.org (162.37.68.54)
+Host is up (0.0081s latency).
+Nmap scan report for coshws120679.co.trinity-health.org (162.37.68.55)
+Host is up (0.060s latency).
+Nmap scan report for coshws150307.co.trinity-health.org (162.37.68.56)
+Host is up (0.062s latency).
+Nmap scan report for coshws121426.co.trinity-health.org (162.37.68.57)
+Host is up (0.0082s latency).
+Nmap scan report for coshws112679.co.trinity-health.org (162.37.68.58)
+Host is up (0.0084s latency).
+Nmap scan report for copsprsh068059.co.trinity-health.org (162.37.68.59)
+Host is up (0.093s latency).
+Nmap scan report for copsws130097.co.trinity-health.org (162.37.68.60)
+Host is up (0.065s latency).
+Nmap scan report for coshws112216.co.trinity-health.org (162.37.68.62)
+Host is up (0.015s latency).
+Nmap scan report for coshws121406.co.trinity-health.org (162.37.68.63)
+Host is up (0.064s latency).
+Nmap scan report for coshws121431.co.trinity-health.org (162.37.68.64)
+Host is up (0.092s latency).
+Nmap scan report for copsws130187.co.trinity-health.org (162.37.68.65)
+Host is up (0.016s latency).
+Nmap scan report for 162.37.68.66
+Host is up (0.017s latency).
+Nmap scan report for coshws120078.co.trinity-health.org (162.37.68.67)
+Host is up (0.075s latency).
+Nmap scan report for coshws120178.co.trinity-health.org (162.37.68.68)
+Host is up (0.070s latency).
+Nmap scan report for coshws120076.co.trinity-health.org (162.37.68.69)
+Host is up (0.018s latency).
+Nmap scan report for 162.37.68.70
+Host is up (0.019s latency).
+Nmap scan report for lxk2c20cd (162.37.68.75)
+Host is up (0.061s latency).
+Nmap scan report for 162.37.68.76
+Host is up (0.091s latency).
+Nmap scan report for coshws125750.co.trinity-health.org (162.37.68.77)
+Host is up (0.032s latency).
+Nmap scan report for 3ktests1.mchs.com (162.37.68.79)
+Host is up (0.060s latency).
+Nmap scan report for coshws150308.co.trinity-health.org (162.37.68.80)
+Host is up (0.062s latency).
+Nmap scan report for coshws121502.co.trinity-health.org (162.37.68.82)
+Host is up (0.032s latency).
+Nmap scan report for coshws121428.co.trinity-health.org (162.37.68.83)
+Host is up (0.078s latency).
+Nmap scan report for copsws100131.co.trinity-health.org (162.37.68.84)
+Host is up (0.081s latency).
+Nmap scan report for coshws121308.co.trinity-health.org (162.37.68.87)
+Host is up (0.076s latency).
+Nmap scan report for coshws121500.co.trinity-health.org (162.37.68.89)
+Host is up (0.021s latency).
+Nmap scan report for 162.37.68.90
+Host is up (0.013s latency).
+Nmap scan report for copsws130100.co.trinity-health.org (162.37.68.91)
+Host is up (0.085s latency).
+Nmap scan report for copsws141237.co.trinity-health.org (162.37.68.92)
+Host is up (0.076s latency).
+Nmap scan report for copsws130378.co.trinity-health.org (162.37.68.93)
+Host is up (0.015s latency).
+Nmap scan report for coshws120623.co.trinity-health.org (162.37.68.96)
+Host is up (0.085s latency).
+Nmap scan report for 162.37.68.97
+Host is up (0.020s latency).
+Nmap scan report for 162.37.68.98
+Host is up (0.012s latency).
+Nmap scan report for coshws120614.co.trinity-health.org (162.37.68.99)
+Host is up (0.098s latency).
+Nmap scan report for 162.37.68.100
+Host is up (0.099s latency).
+Nmap scan report for 162.37.68.105
+Host is up (0.019s latency).
+Nmap scan report for 162.37.68.111
+Host is up (0.079s latency).
+Nmap scan report for coshws141627.co.trinity-health.org (162.37.68.112)
+Host is up (0.068s latency).
+Nmap scan report for coshws150306.co.trinity-health.org (162.37.68.113)
+Host is up (0.010s latency).
+Nmap scan report for coshws120123.co.trinity-health.org (162.37.68.114)
+Host is up (0.0097s latency).
+Nmap scan report for 162.37.68.115
+Host is up (0.058s latency).
+Nmap scan report for coshws150309.co.trinity-health.org (162.37.68.116)
+Host is up (0.062s latency).
+Nmap scan report for coshws120606.co.trinity-health.org (162.37.68.118)
+Host is up (0.0071s latency).
+Nmap scan report for 162.37.68.120
+Host is up (0.057s latency).
+Nmap scan report for 162.37.68.122
+Host is up (0.015s latency).
+Nmap scan report for copsws120312.co.trinity-health.org (162.37.68.124)
+Host is up (0.069s latency).
+Nmap scan report for copsprsh068125.co.trinity-health.org (162.37.68.125)
+Host is up (0.0098s latency).
+Nmap scan report for copsws130375.co.trinity-health.org (162.37.68.126)
+Host is up (0.011s latency).
+Nmap scan report for coshws130937.co.trinity-health.org (162.37.68.127)
+Host is up (0.055s latency).
+Nmap scan report for coshws120628.co.trinity-health.org (162.37.68.128)
+Host is up (0.077s latency).
+Nmap scan report for coshws111971.co.trinity-health.org (162.37.68.129)
+Host is up (0.012s latency).
+Nmap scan report for 162.37.68.130
+Host is up (0.0026s latency).
+Nmap scan report for 162.37.68.131
+Host is up (0.084s latency).
+Nmap scan report for 162.37.68.132
+Host is up (0.071s latency).
+Nmap scan report for 162.37.68.133
+Host is up (0.010s latency).
+Nmap scan report for coshws120616.co.trinity-health.org (162.37.68.134)
+Host is up (0.015s latency).
+Nmap scan report for 162.37.68.135
+Host is up (0.031s latency).
+Nmap scan report for 162.37.68.136
+Host is up (0.082s latency).
+Nmap scan report for 162.37.68.137
+Host is up (0.014s latency).
+Nmap scan report for 162.37.68.138
+Host is up (0.015s latency).
+Nmap scan report for 162.37.68.139
+Host is up (0.087s latency).
+Nmap scan report for 162.37.68.140
+Host is up (0.10s latency).
+Nmap scan report for 162.37.68.141
+Host is up (0.015s latency).
+Nmap scan report for 162.37.68.142
+Host is up (0.016s latency).
+Nmap scan report for copsws130380.co.trinity-health.org (162.37.68.144)
+Host is up (0.073s latency).
+Nmap scan report for coshws120644.co.trinity-health.org (162.37.68.148)
+Host is up (0.090s latency).
+Nmap scan report for coshws120645.co.trinity-health.org (162.37.68.149)
+Host is up (0.018s latency).
+Nmap scan report for coshws120764.co.trinity-health.org (162.37.68.151)
+Host is up (0.056s latency).
+Nmap scan report for coshws120632.co.trinity-health.org (162.37.68.153)
+Host is up (0.017s latency).
+Nmap scan report for coshws120622.co.trinity-health.org (162.37.68.154)
+Host is up (0.019s latency).
+Nmap scan report for coshws120621.co.trinity-health.org (162.37.68.155)
+Host is up (0.085s latency).
+Nmap scan report for coshws120627.co.trinity-health.org (162.37.68.156)
+Host is up (0.072s latency).
+Nmap scan report for 162.37.68.157
+Host is up (0.017s latency).
+Nmap scan report for coshws112444.co.trinity-health.org (162.37.68.158)
+Host is up (0.018s latency).
+Nmap scan report for coshws120615.co.trinity-health.org (162.37.68.159)
+Host is up (0.055s latency).
+Nmap scan report for 162.37.68.162
+Host is up (0.021s latency).
+Nmap scan report for 162.37.68.163
+Host is up (0.065s latency).
+Nmap scan report for coshws121407.co.trinity-health.org (162.37.68.164)
+Host is up (0.058s latency).
+Nmap scan report for coshws121501.co.trinity-health.org (162.37.68.165)
+Host is up (0.017s latency).
+Nmap scan report for coshws120620.co.trinity-health.org (162.37.68.166)
+Host is up (0.018s latency).
+Nmap scan report for coshws120633.co.trinity-health.org (162.37.68.168)
+Host is up (0.063s latency).
+Nmap scan report for coshws150134.co.trinity-health.org (162.37.68.169)
+Host is up (0.022s latency).
+Nmap scan report for 4k1936w1 (162.37.68.170)
+Host is up (0.022s latency).
+Nmap scan report for 3ktests1 (162.37.68.171)
+Host is up (0.059s latency).
+Nmap scan report for coshws112676.co.trinity-health.org (162.37.68.172)
+Host is up (0.057s latency).
+Nmap scan report for coshws120631.co.trinity-health.org (162.37.68.173)
+Host is up (0.019s latency).
+Nmap scan report for 162.37.68.182
+Host is up (0.028s latency).
+Nmap scan report for coshws112206.co.trinity-health.org (162.37.68.184)
+Host is up (0.088s latency).
+Nmap scan report for coshws101825.co.trinity-health.org (162.37.68.185)
+Host is up (0.031s latency).
+Nmap scan report for coshws111970.co.trinity-health.org (162.37.68.186)
+Host is up (0.035s latency).
+Nmap scan report for 162.37.68.187
+Host is up (0.0093s latency).
+Nmap scan report for coshws120927.co.trinity-health.org (162.37.68.188)
+Host is up (0.087s latency).
+Nmap scan report for 162.37.68.189
+Host is up (0.037s latency).
+Nmap scan report for 162.37.68.191
+Host is up (0.078s latency).
+Nmap scan report for coshws120796.co.trinity-health.org (162.37.68.192)
+Host is up (0.087s latency).
+Nmap scan report for coshws121436.co.trinity-health.org (162.37.68.193)
+Host is up (0.037s latency).
+Nmap scan report for coshws112446.co.trinity-health.org (162.37.68.194)
+Host is up (0.037s latency).
+Nmap scan report for 162.37.68.195
+Host is up (0.068s latency).
+Nmap scan report for coshws112594.co.trinity-health.org (162.37.68.196)
+Host is up (0.097s latency).
+Nmap scan report for 162.37.68.198
+Host is up (0.044s latency).
+Nmap scan report for coshws121503.co.trinity-health.org (162.37.68.199)
+Host is up (0.086s latency).
+Nmap scan report for 162.37.68.200
+Host is up (0.0042s latency).
+Nmap scan report for coshws120083.co.trinity-health.org (162.37.68.201)
+Host is up (0.090s latency).
+Nmap scan report for coshws120081.co.trinity-health.org (162.37.68.202)
+Host is up (0.087s latency).
+Nmap scan report for coshws121458.co.trinity-health.org (162.37.68.203)
+Host is up (0.075s latency).
+Nmap scan report for coshws120624.co.trinity-health.org (162.37.68.204)
+Host is up (0.095s latency).
+Nmap scan report for 162.37.68.205
+Host is up (0.086s latency).
+Nmap scan report for coshws150107.co.trinity-health.org (162.37.68.206)
+Host is up (0.072s latency).
+Nmap scan report for 162.37.68.207
+Host is up (0.076s latency).
+Nmap scan report for 162.37.68.208
+Host is up (0.082s latency).
+Nmap scan report for coshws120617.co.trinity-health.org (162.37.68.210)
+Host is up (0.091s latency).
+Nmap scan report for 162.37.68.212
+Host is up (0.098s latency).
+Nmap scan report for coshws101826.co.trinity-health.org (162.37.68.214)
+Host is up (0.069s latency).
+Nmap scan report for coshws101827.co.trinity-health.org (162.37.68.215)
+Host is up (0.099s latency).
+Nmap scan report for coshws113516.co.trinity-health.org (162.37.68.216)
+Host is up (0.091s latency).
+Nmap scan report for coshws121408.co.trinity-health.org (162.37.68.217)
+Host is up (0.070s latency).
+Nmap scan report for 162.37.68.218
+Host is up (0.091s latency).
+Nmap scan report for coshws121462.co.trinity-health.org (162.37.68.219)
+Host is up (0.093s latency).
+Nmap scan report for 162.37.68.220
+Host is up (0.098s latency).
+Nmap scan report for coshws120694.co.trinity-health.org (162.37.68.222)
+Host is up (0.094s latency).
+Nmap scan report for copsws100123.co.trinity-health.org (162.37.68.223)
+Host is up (0.069s latency).
+Nmap scan report for 162.37.68.224
+Host is up (0.094s latency).
+Nmap scan report for 162.37.68.225
+Host is up (0.094s latency).
+Nmap scan report for coshws150557.co.trinity-health.org (162.37.68.227)
+Host is up (0.069s latency).
+Nmap scan report for coshws120618.co.trinity-health.org (162.37.68.228)
+Host is up (0.081s latency).
+Nmap scan report for 162.37.68.229
+Host is up (0.066s latency).
+Nmap scan report for coshws141982.co.trinity-health.org (162.37.68.230)
+Host is up (0.065s latency).
+Nmap scan report for 162.37.68.231
+Host is up (0.040s latency).
+Nmap scan report for coshws120605.co.trinity-health.org (162.37.68.232)
+Host is up (0.096s latency).
+Nmap scan report for coshws120929.co.trinity-health.org (162.37.68.233)
+Host is up (0.097s latency).
+Nmap scan report for coshws112215.co.trinity-health.org (162.37.68.234)
+Host is up (0.040s latency).
+Nmap scan report for coshws120935.co.trinity-health.org (162.37.68.235)
+Host is up (0.040s latency).
+Nmap scan report for coshws120934.co.trinity-health.org (162.37.68.236)
+Host is up (0.045s latency).
+Nmap scan report for coshws121430.co.trinity-health.org (162.37.68.237)
+Host is up (0.064s latency).
+Nmap scan report for 162.37.68.238
+Host is up (0.0013s latency).
+Nmap scan report for 162.37.68.239
+Host is up (0.046s latency).
+Nmap scan report for 162.37.68.240
+Host is up (0.047s latency).
+Nmap scan report for coshws121435.co.trinity-health.org (162.37.68.241)
+Host is up (0.083s latency).
+Nmap scan report for 162.37.68.242
+Host is up (0.066s latency).
+Nmap scan report for coshws112422.co.trinity-health.org (162.37.68.243)
+Host is up (0.049s latency).
+Nmap scan report for 162.37.68.244
+Host is up (0.046s latency).
+Nmap scan report for 162.37.68.245
+Host is up (0.089s latency).
+Nmap scan report for coshws112667.co.trinity-health.org (162.37.68.246)
+Host is up (0.071s latency).
+Nmap scan report for 162.37.68.247
+Host is up (0.085s latency).
+Nmap scan report for coshws120790.co.trinity-health.org (162.37.68.248)
+Host is up (0.084s latency).
+Nmap scan report for coshws120791.co.trinity-health.org (162.37.68.249)
+Host is up (0.071s latency).
+Nmap scan report for 162.37.68.251
+Host is up (0.090s latency).
+Nmap scan report for 162.37.68.253
+Host is up (0.066s latency).
+Nmap scan report for coshws121429.co.trinity-health.org (162.37.68.254)
+Host is up (0.068s latency).
+# Nmap done at Mon Sep 21 11:33:57 2015 -- 256 IP addresses (184 hosts up) scanned in 5.41 seconds

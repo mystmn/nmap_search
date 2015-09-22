@@ -16,14 +16,19 @@ tmp_alpha = "tmp/162_37_69/20150715_0743"
 # default path  = 'tmp/[year][month][day]_[time]/segment'
 class main():
     def alphaStart(self, list=None):
-        configured = controller.userInput().hub()
-#        configured = controller.userInput().override(True, ["segment", "172.31.98"])
-        report, path = nmap.terminalCentral().hub(configured)
+        #
+        # if "*" is [0] then start the automation process other wise, ask the user what menu selection he/she wants
+        list_of_four = controller.userInput().hub([" ", "scanOutput", "segment", "162.37.69", "1"])
+
+        # returns a lsit of three: ['type_of_scan', 'user_input_ip_address_or_segment', key, and folder_path']
+        report, path = nmap.terminal_central().hub(list_of_four)
 
         os_discovery_needed = reports.informationDrainage().searchFilePerLine(report, path)
 
         if os_discovery_needed[0]:
-            controller.userInput().hub(["limitation", "optional"])
+            second_pass_list_of_four = controller.userInput().hub(["limitation", "optional"])
+            report, path = nmap.terminal_central().hub(second_pass_list_of_four)
+
 
 main().alphaStart()
 
